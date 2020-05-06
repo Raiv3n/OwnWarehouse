@@ -1,0 +1,10 @@
+# IDE
+.idea/
+
+# Python stuff
+venv/
+*.pyc
+
+# Database
+db.sqlite3
+
