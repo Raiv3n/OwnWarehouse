@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <h1>Locations</h1>
+        {% if locations %}
+            <ul>
+                {% for location in locations %}
+                    <h2>{{ location.location }}</h2>
+                    <ul>
+                        {% if location.item_set.count > 0 %}
+                            {% for item in location.item_set.all %}
+                                {{ item.name }}
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </body>
+</html>
